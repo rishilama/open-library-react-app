@@ -43,19 +43,20 @@ export default function Login(props) {
         }
     }
     return (
-        <div>
+        <div className="container">
+            <div className="login-content">
 
-            <h1>Login</h1>
+                <h1>Login</h1>
 
-            {error && <p className="msg msg--error">{error.toString()}</p>}
-            <br />
-            USER: <span>{JSON.stringify(user)}</span>
+                {error && <p className="msg msg--error">{error.toString()}</p>}
+                <br />
 
-            <form onSubmit={handleSubmit}>
-                <input type="email" value={email} onChange={(e) => { setError(''); setEmail(e.target.value) }} />
-                <input type="password" value={password} onChange={(e) => { setError(''); setPassword(e.target.value) }} />
-                <button>Login</button>
-            </form>
+                <form className="loginForm" onSubmit={handleSubmit}>
+                    <input className="input" placeholder="Email" type="email" value={email} onChange={(e) => { setError(''); setEmail(e.target.value) }} />
+                    <input className="input" placeholder="Password" type="password" value={password} onChange={(e) => { setError(''); setPassword(e.target.value) }} />
+                    <button className="login-button">Login</button>
+                </form>
+            </div>
         </div>
     )
 }

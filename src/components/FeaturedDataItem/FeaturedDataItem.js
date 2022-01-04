@@ -1,8 +1,8 @@
-function FeaturedDataItem() {
+function FeaturedDataItem( { number, text} ) {
     return (
         <div className="container-col">
-            <h1 className="col-numbers">4000+</h1>
-            <p className="col-text">HAPPY CUSTOMERS</p>
+            <h1 className="col-numbers">{number}</h1>
+            <p className="col-text">{text}</p>
         </div>
     )
 }

@@ -66,6 +66,11 @@ h4 {
   position: absolute;
 }
 
+.hamburger{
+  background-color: transparent;
+  border: none;
+}
+
 .hamburger span {
   width: 18px;
   height: 2px;
@@ -915,4 +920,119 @@ hr{
 
 .user{
   color: white;
+}
+
+li a{
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+.create{
+  display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.create input,
+.create textarea{
+	margin-bottom: 20px;
+}
+
+.create label{
+	margin-bottom: 10px;
+	color: black;
+	font-weight: 600;
+}
+
+.create input,
+.create textarea{
+	width: 180%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid darkgray;
+}
+
+.create-btn{
+	margin: 30px 0 20px;
+	padding: 15px 50px;
+	background-color: #406fcc;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.site-header__signin{
+  margin-left: 18px;
+}
+
+.site-header__signin:hover{
+  background-color: white;
+  color: #00293f;
+}
+
+.login-content{
+  padding: 80px 0px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-content p{
+  margin-top: 40px;
+  margin-bottom: -30px;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.input{
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  border: 1px solid darkgray;
+}
+
+
+.login-button{
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #00293f;
+  color: white;
+  width: 50%;
+  padding: 15px 70px;
+  border: none;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+
+
+@media(min-width:768px){
+  .loginForm{
+      width: 100%;
+  }
+  .input{
+      width: 30%;
+  }
+  .login-button{
+    width: 10%;
+  }
 }

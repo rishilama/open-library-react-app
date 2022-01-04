@@ -1,9 +1,9 @@
-function SectionHeading({book_title}) {
+function SectionHeading({section_title}) {
     return (
         <div className="category">
             <div className="category-main-heading category-list-container">
                 <h2 className="category-heading">
-                    {book_title ? book_title : 'Section Name Here'}
+                    {section_title ? section_title : 'Section Name Here'}
                 </h2>
             </div>
         </div>

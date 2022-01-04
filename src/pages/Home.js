@@ -3,10 +3,6 @@ import FeaturedBoxList from "../components/FeaturedBoxList/FeaturedBoxList";
 import FeaturedTestimonial from "../components/FeaturedTestimonial/FeaturedTestimonial";
 import BestBooksGrid from "../components/BestBooksGrid/BestBooksGrid";
 import FeaturedDataList from "../components/FeaturedDataList/FeaturedDataList";
-import SectionHeading from "../components/SectionHeading/SectionHeading";
-import CardList from "../components/CardList/CardList";
-import BookDetail from "../components/BookDetail/BookDetail";
-
 
 
 function Home() {
@@ -24,8 +20,6 @@ function Home() {
             <FeaturedTestimonial />
             <BestBooksGrid />
             <FeaturedDataList />
-            <SectionHeading />
-            <CardList />
         </div>
 
     )

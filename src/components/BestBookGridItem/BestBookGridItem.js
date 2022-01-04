@@ -1,9 +1,17 @@
-function BestBookGridItem() {
+import { Link } from "react-router-dom";
+
+function BestBookGridItem({ id, title, image }) {
     return (
         <li>
-            <a href="https://google.com"><img className="doc_thumb "
-                src="https://source.unsplash.com/random/90x120?vibrant,color,twelve"
-                alt="Book, Corporate Chanakya on Leadership - Read book online for free with a free trial." /></a>
+            <Link to={`book/${id}`}>
+                <img className="doc_thumb "
+                src={image}
+                alt={title} 
+                style={{
+                    width: "100px"
+                }}
+            />
+            </Link>
         </li>
     )
 }

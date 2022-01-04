@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../store/userContext";
 
-export default function Signup(props) {
+function Signup(props) {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
@@ -44,19 +46,24 @@ export default function Signup(props) {
     }
 
     return (
-        <div>
+        <div className="container">
+            <div className="login-content">
 
-            <h1>Login</h1>
+                <h1>Signup</h1>
 
-            {error && <p className="msg msg--error">{error.toString()}</p>}
-            <br />
-            USER: <span>{JSON.stringify(user)}</span>
+                {error && <p className="msg msg--error">{error.toString()}</p>}
+                <br />
 
-            <form onSubmit={handleSubmit}>
-                <input type="email" value={email} onChange={(e) => { setError(''); setEmail(e.target.value) }} />
-                <input type="password" value={password} onChange={(e) => { setError(''); setPassword(e.target.value) }} />
-                <button>Singup</button>
-            </form>
+                <form className="loginForm" onSubmit={handleSubmit}>
+                    <input className="input" placeholder="First Name" type="text" value={firstName} onChange={(e) => { setError(''); setFirstName(e.target.value) }} />
+                    <input className="input" placeholder="Last Name" type="text" value={lastName} onChange={(e) => { setError(''); setLastName(e.target.value) }} />
+                    <input className="input" placeholder="Email" type="email" value={email} onChange={(e) => { setError(''); setEmail(e.target.value) }} />
+                    <input className="input" placeholder="Password" type="password" value={password} onChange={(e) => { setError(''); setPassword(e.target.value) }} />
+                    <button className="login-button">Singup</button>
+                </form>
+            </div>
         </div>
     )
 }
+
+export default Signup

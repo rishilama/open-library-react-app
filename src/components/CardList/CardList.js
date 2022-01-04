@@ -22,7 +22,7 @@ function CardList() {
                 title={book.book_title} 
                 image={book.cover_url} 
                 description = {book.book_short_description} 
-                authorName={book.authors[0].author_name}
+                authorName={book.authors[0]?.author_name}
                 authorURL='https://google.com' />
             ))}
         </div>
