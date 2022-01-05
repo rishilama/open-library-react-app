@@ -17,9 +17,9 @@ function Create(props) {
 
     const [err, setError] = useState('');
     const [successMsg, setSuccessMsg] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const { user } = useContext(UserContext);
-    const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
@@ -33,6 +33,7 @@ function Create(props) {
 
                     if (data.error) {
                         setError('Error fetching the book')
+                        console.log(err)
                     }
 
                     console.log(data);
@@ -40,6 +41,7 @@ function Create(props) {
                     setLoading(false);
                     setEditBook(data);
                     setSuccessMsg('Edit mode: ON')
+                    console.log(successMsg)
 
                     setBookTitle(data.book_title);
                     setShortDescription(data.book_short_description);
@@ -54,6 +56,7 @@ function Create(props) {
             };
 
             fetchBook();
+            console.log(loading)
         }
     }, [])
 
