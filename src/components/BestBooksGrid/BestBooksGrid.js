@@ -27,7 +27,7 @@ function BestBooksGrid() {
                     {list ? 
                         list.map((book) => {
                             return(
-                                <BestBookGridItem id={book.id} title={book.book_title} image={book.cover_url} />
+                                <BestBookGridItem key={book.id} title={book.book_title} image={book.cover_url} />
                             )
                         })
                         :
